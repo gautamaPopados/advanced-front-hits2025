@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./LoginPage.module.css";
 import mainImage from "../../../assets/main-image.svg";
-import Input from "../../layout/input/textInput/Input";
+import Input from "../../layout/input/TextInput/Input";
 import Button from "../../layout/input/button/Button";
 import Switch from "../../layout/input/switch/Switch";
 import Header from "../../layout/header/Header";
@@ -26,7 +26,7 @@ const LoginPage = () => {
     event.preventDefault();
 
     try {
-      login(email, password, rememberMe);
+      await login(email, password, rememberMe);
       navigate('/');
     } catch {
       setErrorMessage(t("login.loginError"));

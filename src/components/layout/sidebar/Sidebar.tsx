@@ -21,7 +21,7 @@ const MySidebar = ({collapsed, setCollapsed} : SidebarProps)  => {
   const { t } = useTranslation();
 
   return (
-    <div className={isAuthenticated ? styles.container : styles.notAuth}>
+    <div className={`${isAuthenticated ? styles.container : styles.notAuth} ${collapsed ? styles.containerCollapsed : ''}`}>
 
       <AvatarMenu onLogout={logout} className={`${styles.avatar}  ${collapsed ? styles.avatarCollapsed : ''}`}/>
 
@@ -30,7 +30,7 @@ const MySidebar = ({collapsed, setCollapsed} : SidebarProps)  => {
               <CollapseIcon/>
       </button>
 
-      <Sidebar collapsed={collapsed} width="280px" collapsedWidth="118px" backgroundColor="white">
+      <Sidebar collapsed={collapsed} width="280px" collapsedWidth="118px" backgroundColor="white" >
             
         <Menu
           rootStyles={{
@@ -55,6 +55,7 @@ const MySidebar = ({collapsed, setCollapsed} : SidebarProps)  => {
               boxSizing: 'border-box',
               padding: collapsed ? '4px 39.5px' : '4px 31.5px',
               transition: 'all 0.2s linear',
+              textAlign: 'start',
               '&:hover': {
                 backgroundColor: 'rgba(219, 226, 255, 0.1)'
               },

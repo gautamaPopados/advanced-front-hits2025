@@ -1,11 +1,27 @@
+* {
+  margin: 0;
+}
+
 .container {
-    width: 100%;
-    gap: 23px;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10.4%;
-    height: 100vh;
-    transition: padding-left 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 23px;
+  padding: 0 10.4%;
+  height: 100vh;
+  transition: padding-left 0.1s linear;
+  }
+
+.cover{
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.1s linear;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
   }
 
 .notCollapsedContainer {
@@ -15,19 +31,44 @@
     padding-left: 81px;
 }
 
-  .loginForm {
-    display: flex;
-    width: 40%;
-    max-width: 622px;
-    min-width: 343px;
-    flex-direction: column;
-    padding: 45px 30px;
-    gap: 48px;
-    background: #FFFFFF;
-    border-radius: 20px;
+@media(max-width: 1535px) {
+  .notCollapsedContainer + .cover{
+    background: rgba(0, 0, 0, 0.2);
   }
+  .collapsedContainer {
+    padding-left: 10.4%;
+  }
+  .notCollapsedContainer {
+    padding-left: 10.4%;
+  }
+}
+
+.searchContainer {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(249, 249, 249, 1);
+  padding: 24px 28px;
+  text-align: start;
+}
+
+.inputContainer {
+  display: flex;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  gap: 12px 5px;
+}
+
+.nameInput {
+  flex-shrink: 2;
+  flex-basis: 924px;
+}
+
+.submitButton {
+  flex-grow: 1;
+}
   
-  .illustration {
+.illustration {
     display: flex;
     width: 57%;
     min-width: 350px;
@@ -49,7 +90,7 @@
 
     .container {
       gap: 30px;
-      padding: 20px 20px;
+      padding: 0 8.7%;
 
     }
 
@@ -61,6 +102,7 @@
   @media(max-width: 900px) {
     .container {
       gap: 0;
+      padding: 0 5.5%;
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -68,13 +110,11 @@
     
   }
   
-  @media(max-width: 600px) {
-  }
   
   @media(max-width: 375px) {
     .container {
       flex-wrap: wrap;
-      padding: 0 9px;
+      padding: 0 16px;
     }
 
     .container .illustration {

@@ -8,7 +8,7 @@ class AuthClientStore {
 
   static setAccessToken(token: string) {
     localStorage.setItem(ACCESS_TOKEN_KEY, token);
-    console.log("stored 2");
+    // console.log("stored 2");
   }
 
   static removeAccessToken(): void {

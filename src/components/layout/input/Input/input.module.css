@@ -1,0 +1,92 @@
+.field_container {
+  position: relative;
+  display: flex;
+  background: var(--background-color-field);
+  border-radius: 0.35rem;
+  width: 100%;
+  height: 3.42rem;
+  cursor: text;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.field_container[aria-disabled='true'] {
+  cursor: default;
+  background-color: var(--background-color-field-focused);
+}
+
+.field_container:hover:not(.input_error) {
+  background-color: var(--background-color-field-focused);
+}
+
+.indicator_container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_container {
+  display: flex;
+  width: 100%;
+  padding: 1.42rem 1.07rem 0.64rem;
+}
+
+.indicator_container ~ .input_container {
+  width: 85%;
+  padding-right: 0;
+}
+
+.indicator_container ~ .input:disabled {
+  background-color: red;
+}
+
+.input_error {
+  background: var(--background-color-field-validation);
+}
+
+.input_label {
+  user-select: none;
+  cursor: text;
+  position: absolute;
+  left: 1.07rem;
+  top: 1.07rem;
+  font-size: 1rem;
+  color: var(--color-placeholder);
+  z-index: 1;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.input_container[aria-disabled='true'] .input_label {
+  cursor: default;
+}
+
+.input:focus ~ .input_label,
+.input:not([value='']) ~ .input_label {
+  transform: translate(-5%, -75%);
+  font-size: 0.71rem;
+}
+
+.input {
+  border: none;
+  width: 100%;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background-color: transparent;
+}
+
+.input:active,
+.input:focus {
+  outline: none;
+  caret-color: var(--color-text);
+}
+
+.helper_text {
+  width: 100%;
+  font-weight: 300;
+  font-size: 0.71rem;
+  line-height: 1rem;
+  color: var(--color-text-validation);
+  padding-left: 0.71rem;
+}

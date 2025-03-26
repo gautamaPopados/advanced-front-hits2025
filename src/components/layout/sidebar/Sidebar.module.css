@@ -1,20 +1,36 @@
 .container {
     display: flex !important;
-    height: 916px !important;
     position: relative !important;
-
+    z-index: 20 !important;
+    transition-property: width opacity !important;
+    transition-duration: .3s !important;
+    transition-behavior: allow-discrete !important;
+    opacity: 1 !important;
 }
 
+@starting-style {
+    .container {
+        opacity: 0 !important;
+        width: 0 !important;
+    }
+}
 
 .notAuth {
     display: none !important;
+    opacity: 0 !important;
 }
 
-@media(max-width: 1536px) {
+@media(max-width: 1535px) {
     .container {
-        display: inline-block !important;
-        height: 916px !important;
-        position: fixed !important;    
+        position: fixed !important;   
+        height: 100% !important; 
+    }
+    
+    
+    .containerCollapsed {
+        opacity: 0 !important;
+        display: none !important;
+        width: 0 !important;
     }
 }
 

@@ -5,10 +5,11 @@ import { useState } from 'react';
 
 
 interface InputProps {
-    type?: "text" | "email" | "password" | "search";
+    type?: "text" | "email" | "password" | "search" | "small";
     placeholder?: string;
     supportingText?: string;    
-    label?: string;    
+    label?: string;  
+    maxLength?: number;   
     value: string;
     required?: boolean;
     disabled?: boolean;
@@ -34,8 +35,8 @@ interface InputProps {
 
     return (
         <div className={styles.container}>
-            <div className={styles.textFieldContainer}>
-              <div className={styles.stateLayer}>
+            <div className={`${styles.textFieldContainer} ${type == "small" ? styles.small : ''}`}>
+              <div className={`${styles.stateLayer} ${type == "small" ? styles.small : ''}`}>
                 {type == "search" && <img src={glassIcon} />}
                 <input
                     type={type}

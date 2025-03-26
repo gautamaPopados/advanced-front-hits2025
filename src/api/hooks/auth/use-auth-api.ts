@@ -18,7 +18,7 @@ export const useAuthApi = () => {
     });
 
     AuthClientStore.setAccessToken(response.accessToken);
-    console.log("stored 1")
+    // console.log("stored 1")
     AuthClientStore.setRefreshToken(response.refreshToken);
 
     return response;

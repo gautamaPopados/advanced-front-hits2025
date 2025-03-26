@@ -19,6 +19,10 @@ export interface TranslationTypes {
         services: string;
         events: string;
         logout: string;
+      };
+      searchBar: {
+        title: string;
+        find: string;
       }
     }
   }

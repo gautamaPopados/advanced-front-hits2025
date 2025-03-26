@@ -6,9 +6,19 @@
 }
 
 .text {
-width: 174px;
-height: 28px;
-text-align: start;
+    width: 174px;
+    height: 28px;
+    text-align: start;
+}
+
+.hamburger {
+    display: none;
+    align-items: center;
+    background-color: transparent;
+}
+
+.hamburger:hover {
+    background-color: transparent;
 }
 
 .rightSide{
@@ -23,6 +33,20 @@ text-align: start;
 a {
     color: #ffffff;
     text-decoration: none;
+}
+
+@media(max-width: 1535px) {
+    .hamburger {
+        display: flex;
+    }
+/* 
+    .hamCollapsed {
+        display: none;
+    } */
+
+    .text {
+        display: none;
+    }
 }
 
 @media(max-width: 900px) {

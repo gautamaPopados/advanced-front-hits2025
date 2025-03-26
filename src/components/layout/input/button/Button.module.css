@@ -10,7 +10,7 @@
     gap: 10px;
     border-color: transparent;
     border-radius: 8px;
-
+    width: -webkit-fill-available;
 }
 
 .primary {

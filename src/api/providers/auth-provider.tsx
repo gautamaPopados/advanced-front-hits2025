@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { useAuthApi } from "../hooks/auth/use-auth-api";
 import { ApiMethod } from "../../utils/api/types";
 import AuthClientStore from "../auth-client-store";
@@ -27,7 +27,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
     me: authMe,
     sendAuthGuardedRequest: authSendAuthGuardedRequest,
   } = useAuthApi();
-
+  
   const login = async (email: string, password: string, rememberMe: boolean) => {
     try {
       await authLogin(email, password, rememberMe);
