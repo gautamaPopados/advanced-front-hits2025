@@ -1,0 +1,67 @@
+.container {
+    display: flex !important;
+    height: 916px !important;
+    position: relative !important;
+
+}
+
+
+.notAuth {
+    display: none !important;
+}
+
+@media(max-width: 1536px) {
+    .container {
+        display: inline-block !important;
+        height: 916px !important;
+        position: fixed !important;    
+    }
+}
+
+.header {
+    margin-bottom: 57px;
+    height: 95px;
+}
+
+.avatar {
+    position: absolute;
+    display: flex;
+    top:15px;
+    left: 107px;
+    display: inline-block;
+    transition: left 0.15s linear;
+    align-content: center;
+    height: 95px;
+    gap: 8px;
+    z-index: 5;
+
+}
+
+.avatarCollapsed {
+    left: 26px;
+}
+
+.arrowButton {
+    position: absolute;
+    right: -11px;
+    top: 30px;
+    padding: 0;
+    transform: transform 0.2s;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+.arrowButton:hover {
+background-color: transparent;
+}
+
+.left {
+transform: rotate(0);
+}
+
+.right {
+transform: rotate(-180deg);
+margin-bottom: -2px;
+}

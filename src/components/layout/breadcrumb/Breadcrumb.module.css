@@ -1,0 +1,32 @@
+.breadcrumb {
+  display: flex;
+font-weight: 500;
+
+/* Text */
+color: #3A3A3A;
+/* padding: 0 10.4%; */
+padding-top: 24px;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 120%;
+/* identical to box height, or 17px */
+font-feature-settings: 'pnum' on, 'lnum' on;
+font-weight: 500;
+}
+
+span, .slash {
+  padding-right: 5px;
+}
+span a {
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+.breadcrumb .last {
+  color: rgba(55, 95, 255, 1);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}

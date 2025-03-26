@@ -1,0 +1,5 @@
+export { default as AdminIcon } from './admin.svg'
+export { default as DocsIcon } from './document.svg'
+export { default as LinkIcon } from './link.svg'
+export { default as MapIcon } from './map.svg'
+export { default as UserIcon } from './user.svg'

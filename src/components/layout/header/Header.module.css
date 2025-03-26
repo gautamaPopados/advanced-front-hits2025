@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 10.4%; */
+    margin-top: 39.5px;
+}
+
+.text {
+width: 174px;
+height: 28px;
+text-align: start;
+}
+
+.rightSide{
+    display: flex;
+    gap: 20px;
+}
+
+.loginButton {
+    margin-right: 30px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media(max-width: 900px) {
+    .header {
+        margin-top: 19px;
+    }
+  }
+
+
+@media(max-width: 375px) {
+    .header {
+        /* padding: 0 16px; */
+    }
+  }

@@ -1,0 +1,65 @@
+.button {
+        /* style=primary, State=default */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    padding: 15px 42px 15px 40px;
+    gap: 10px;
+    border-color: transparent;
+    border-radius: 8px;
+
+}
+
+.primary {
+    composes: button;
+    background: #375FFF;
+}
+
+.primary:hover {
+    background-color: #002FEA;
+}
+
+.primary:active {
+    background-color: #204CFF;
+}
+
+.primary:disabled {
+    background-color: #97A9F1;
+}
+
+
+
+.outlined {
+    composes: button;
+    gap: 10px;
+    color: #3A3A3A;
+    outline-color:  transparent;
+    outline-width: 2px;
+    outline-style: solid;
+    background-color: white;
+    border: 1px solid #3A3A3A;
+    -webkit-transition-property: outline-color, border-color;
+    -webkit-transition-duration: 100ms, 100ms;
+}
+
+.outlined:hover {
+    outline-color: #3A3A3A;
+    border-color: white;
+    background-color: white;
+}
+
+.outlined:active {
+    outline-color: #204CFF;
+    color: #204CFF;
+    background-color: white;
+}
+
+.outlined:disabled {
+    outline-color: #97A9F1;
+    color: #97A9F1;
+    background-color: white;
+}
+

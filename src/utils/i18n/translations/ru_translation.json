@@ -1,0 +1,24 @@
+{
+    "events": {
+      "headerTitle": "Мероприятия"
+    },
+    "login": {
+      "formTitle": "Вход в аккаунт",
+      "emailLabel": "Электронная почта",
+      "passwordLabel": "Пароль",
+      "rememberMe": "Запомнить меня",
+      "loginButton": "Войти",
+      "loginError": "Неверные данные",
+      "error": "Ошибка входа"
+    },
+    "layout": {
+      "sidebar": {
+        "profile": "Профиль",
+        "admin": "Администрирование",
+        "docs": "Справки",
+        "services": "Полезные сервисы",
+        "events": "Мероприятия",
+        "logout" : "Выйти"
+      }
+    }
+  }

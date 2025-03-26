@@ -1,0 +1,24 @@
+{
+    "events": {
+      "headerTitle": "Events"
+    },
+    "login": {
+      "formTitle": "Log in",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "rememberMe": "Remember me",
+      "loginButton": "Log in",
+      "loginError": "Incorrect credemtials",
+      "error": "Login error"
+    },
+    "layout": {
+      "sidebar": {
+        "profile": "Profile",
+        "admin": "Administration",
+        "docs": "Documentation",
+        "services": "Services",
+        "events": "Events",
+        "logout" : "Exit"
+      }
+    }
+}

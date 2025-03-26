@@ -1,0 +1,6 @@
+export { default as ArrowIcon } from './arrow.svg'
+export { default as CrossIcon } from './cross.svg'
+export { default as EnglishIcon } from './english.svg'
+export { default as GlassIcon } from './glass.svg'
+export { default as MainImage } from './main-image.svg'
+export { default as RussianIcon } from './russian.svg'

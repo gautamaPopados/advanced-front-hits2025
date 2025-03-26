@@ -1,0 +1,232 @@
+input {
+    outline: none;
+    margin: 0;
+}
+
+.container {
+    /* State=Default */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    isolation: isolate;
+
+    border-radius: 4px 4px 0px 0px;
+}
+
+.textFieldContainer {
+        /* text field */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 8px 16px;
+    height: 70px;
+
+    border: 1px solid #3A3A3A80;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    z-index: 0;
+
+}
+
+@media(max-width: 600px) {
+    .textFieldContainer {
+        height: 60px;
+    }
+
+    .textFieldContainer .stateLayer {
+        height: 40px;
+    }
+  }
+
+
+.textField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    border: none;
+    font-family: 'Raleway';
+    background-color: white;
+    height: 19px;
+    color: #3A3A3A;
+    flex: none;
+    flex-grow: 1;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.textFieldContainer:hover, .textFieldContainer:active {
+    border-color: #3A3A3A;
+}
+
+.textFieldContainer:hover .textLabel, .textFieldContainer:active .textLabel{
+    color: #49454F;
+}
+
+.textFieldContainer:has(.textField:not(:placeholder-shown):not(:focus):invalid:required) {
+    border-color: #EB5757;
+}
+
+.textField:not(:placeholder-shown):not(:focus):invalid:required,
+.textFieldContainer:has(.textField:not(:placeholder-shown):not(:focus):invalid:required) .textLabel,
+.container:has(.textField:not(:placeholder-shown):not(:focus):invalid:required) .supportingText {
+    color: #EB5757;
+}
+
+.textField:disabled,
+.textFieldContainer:has(.textField:disabled) .textLabel,
+.container:has(.textField:disabled) .supportingText {
+    color: #3A3A3A80;
+}
+
+.stateLayer:has(.textField:not(:placeholder-shown):not(:focus):invalid:required) img {
+    filter: invert(51%) sepia(59%) saturate(1918%) hue-rotate(326deg) brightness(96%) contrast(91%);
+}
+
+.stateLayer:has(.textField:disabled) img {
+    filter:opacity(50%);
+}
+
+.textFieldContainer:has(.textField:disabled) {
+    border-color: #3A3A3A80;
+}
+
+.textLabel {
+            /* label-text */
+    /* label-text */
+
+    /* P2 */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9D9D9D;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 4px;
+
+    position: relative;
+
+    background: #ffffff;
+
+
+}
+
+
+.stateLayer {
+    /* state-layer */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 8px;
+    isolation: isolate;
+
+    height: 50px;
+
+    border-radius: 4px 4px 0px 0px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+
+}
+
+.supportingTextContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 16px 0px;
+    gap: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+
+}
+
+.supportingText {
+    /* width: 178px;
+    height: 17px; */
+    margin: 0;
+    text-align: left;
+    /* P2 */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #3A3A3A;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+}
+
+.iconContainer {
+    align-content: center;
+}
+
+img {
+    justify-content: center;
+}
+
+.textInput {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+height: 19px;
+flex: none;
+order: 2;
+flex-grow: 1;
+z-index: 2;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+width: 39px;
+height: 19px;
+flex: none;
+order: 1;
+flex-grow: 0;
+width: 39px;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 120%;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #3A3A3A;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
