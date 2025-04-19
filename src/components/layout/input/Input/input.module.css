@@ -4,11 +4,12 @@
   background: var(--background-color-field);
   border-radius: 0.35rem;
   width: 100%;
-  height: 3.42rem;
+  height: 48px;
   cursor: text;
   transition: var(--transition);
   display: flex;
   flex-direction: row-reverse;
+  border: 1px solid;
 }
 
 .field_container[aria-disabled='true'] {
